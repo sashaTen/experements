@@ -12,12 +12,6 @@ def test_load_data():
 
     # Load the data
     df = load_data(url)
-
-    # Check if the output is a DataFrame
     assert isinstance(df, pd.DataFrame), "Output should be a DataFrame"
-
-    # Check if the DataFrame has the 'head' method
-    assert hasattr(df, 'head'), "DataFrame should have a 'head' method"
-
     # Optionally, you can also check if the DataFrame is not empty
     assert not df.empty, "DataFrame should not be empty"
