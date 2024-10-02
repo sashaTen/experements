@@ -1,19 +1,8 @@
-git  add . 
+# test_load_data.py
 
-
-git  commit   -m  'generic'
-
-
-git  push   origin  main 
-
-
-
-
-
-
-
-
-
+import pandas as pd
+import pytest 
+from   expr   import load_data
 
 url = 'https://raw.githubusercontent.com/surge-ai/stock-sentiment/main/sentiment.csv'
 
