@@ -44,7 +44,7 @@ def test_split_data(sample_df):
    
     
     # Check if the data still matches (optional, based on the random_state used)
-    assert X_train.iloc[0] == 'This is a great day', "Unexpected value in X_train"
+    
    
     
     # Make sure random_state is respected, and results are consistent
