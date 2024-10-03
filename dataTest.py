@@ -4,9 +4,10 @@ import pandas as pd
 import pytest 
 from   expr   import load_data
 
-url = 'https://raw.githubusercontent.com/surge-ai/stock-sentiment/main/sentiment.csv'
+
 
 def test_load_data():
+    url = 'https://raw.githubusercontent.com/surge-ai/stock-sentiment/main/sentiment.csv'
     # Check if the input is a string
     assert isinstance(url, str), "Input should be a string"
 
