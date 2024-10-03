@@ -3,7 +3,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 import pytest 
-from   dirty_code   import load_data
+from   dirty_code   import load_data ,  split_data
 
 
 
