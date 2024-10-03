@@ -5,8 +5,9 @@ git  commit   -m  'generic'
 
 
 git  push   origin  main 
+docker push keshtenscript/sentiment_analysis :latest
 
-
+docker images
 
 
 
