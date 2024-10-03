@@ -27,9 +27,6 @@ jobs:
         run: |
          pytest dataTest.py                 # Run your tests
 
-      - name: Build Docker image (only if tests pass)
-        if: success()                      # Proceed only if tests succeed
-        run: |
-          docker build -t sentiment_img_exp .
+    
 
      
