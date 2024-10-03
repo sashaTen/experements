@@ -17,8 +17,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.9
-  # Specify Python version
-      
+          
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -26,6 +25,11 @@ jobs:
 
       - name: Run tests
         run: |
-         pytest dataTest.py
-        
-         
+         pytest dataTest.py                 # Run your tests
+
+      - name: Build Docker image (only if tests pass)
+        if: success()                      # Proceed only if tests succeed
+        run: |
+          docker build -t sentiment_img:latest .
+
+     
