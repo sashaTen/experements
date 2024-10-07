@@ -15,11 +15,14 @@ from scipy.sparse import csr_matrix
 
 
 
+url = 'https://raw.githubusercontent.com/surge-ai/stock-sentiment/main/sentiment.csv'
 
 
 
-def load_data():
-    url = 'https://raw.githubusercontent.com/surge-ai/stock-sentiment/main/sentiment.csv'
+
+
+
+def load_data(url):
     df = pd.read_csv(url)
     return df
 
@@ -56,10 +59,6 @@ def evaluate_model(model, X_test_vec, y_test) :
 
 #
 
-
-
-
-url = 'https://raw.githubusercontent.com/surge-ai/stock-sentiment/main/sentiment.csv'
 
 
 # Step 1: Load data
