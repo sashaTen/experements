@@ -59,13 +59,13 @@ def evaluate_model(model, X_test_vec, y_test) :
 
 
 
-
+url = 'https://raw.githubusercontent.com/surge-ai/stock-sentiment/main/sentiment.csv'
 
 
 # Step 1: Load data
 @step
-def zen_load_data() -> pd.DataFrame:
-    url = 'https://raw.githubusercontent.com/surge-ai/stock-sentiment/main/sentiment.csv'
+def zen_load_data(url : str) -> pd.DataFrame:
+   
     df = pd.read_csv(url)
     return df
 
@@ -103,8 +103,8 @@ def  zen_evaluate_model(model: LogisticRegression, X_test_vec: csr_matrix, y_tes
 
 # Pipeline to connect all the steps
 @pipeline
-def  zen_sentiment_analysis_pipeline():
-    df =  zen_load_data()
+def  zen_sentiment_analysis_pipeline(url):
+    df =  zen_load_data(url)
     X_train, X_test, y_train, y_test =  zen_split_data(df)
     vectorizer, X_train_vec, X_test_vec =  zen_preprocess_text(X_train, X_test)
     model =  zen_train_model(X_train_vec, y_train)
@@ -112,7 +112,7 @@ def  zen_sentiment_analysis_pipeline():
 
 # Run the pipeline
 if __name__ == "__main__":
-    zen_sentiment_analysis_pipeline()
+    zen_sentiment_analysis_pipeline(url)
    
 
 

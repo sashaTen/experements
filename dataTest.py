@@ -13,7 +13,7 @@ def test_load_data():
     assert isinstance(url, str), "Input should be a string"
 
     # Load the data
-    df = load_data()
+    df = load_data(url)
     assert isinstance(df, pd.DataFrame), "Output should be a DataFrame"
     # Optionally, you can also check if the DataFrame is not empty
     assert not df.empty, "DataFrame should not be empty"
