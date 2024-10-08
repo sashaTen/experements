@@ -1,6 +1,7 @@
 from  expr   import   load_data     ,   zen_sentiment_analysis_pipeline
 from zenml.client import Client
 ## counts number  of the rows   in  df  and  if  >1000 retrains 
+#  https://raw.githubusercontent.com/sardarosama/Stock-Market-Trend-Prediction-Using-Sentiment-Analysis/refs/heads/main/stock_data.csv
 url = 'https://raw.githubusercontent.com/surge-ai/stock-sentiment/main/sentiment.csv'
 def check_number_samples(df ,  url):
     if  df.shape[0]> 490:
